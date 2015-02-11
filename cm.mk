@@ -15,13 +15,13 @@
 #
 
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/mk/config/cdma.mk)
+$(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := Y550
 
 # Inherit some common Mokee stuff.
-$(call inherit-product, vendor/mk/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/y550/full_y550.mk)
@@ -32,4 +32,4 @@ PRODUCT_PACKAGES += \
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := y550
-PRODUCT_NAME := mk_y550
+PRODUCT_NAME := cm_y550
