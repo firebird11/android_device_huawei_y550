@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VENDOR=huawei
-DEVICE=c8817d
+DEVICE=y550
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -117,7 +117,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter c8817d,\$(TARGET_DEVICE)),)
+ifneq (\$(filter y550,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location

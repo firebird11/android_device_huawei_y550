@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VENDOR=huawei
-DEVICE=c8817d
+DEVICE=y550
 
 function extract() {
     for FILE in `egrep -v '(^#|^$)' $1`; do
