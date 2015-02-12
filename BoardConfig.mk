@@ -91,11 +91,6 @@ USE_OPENGL_RENDERER := true
 # Hardware
 #BOARD_HARDWARE_CLASS := device/huawei/y550/cmhw
 
-# Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_c8817d.c
-
 # Liblight
 TARGET_PROVIDES_LIBLIGHT := true
 

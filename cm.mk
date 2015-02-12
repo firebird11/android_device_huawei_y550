@@ -33,3 +33,7 @@ PRODUCT_PACKAGES += \
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := y550
 PRODUCT_NAME := cm_y550
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT="Huawei/Y550-L01/hwY550-L01:4.4.4/HuaweiY550-L01C150B239/SVK:user/ota-rel-keys,release-keys" \
+    PRIVATE_BUILD_DESC="Y550-L01-user 4.4.4 GRJ90 C150B239 release-keys"
