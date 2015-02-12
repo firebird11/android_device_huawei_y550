@@ -907,6 +907,7 @@ bin/wcnss_filter
 bin/wlan_detect
 xbin/wifi_aging
 xbin/wifi_power_off
+etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/wifi/WCNSS_hw_wlan_nv.bin
 etc/wifi/WCNSS_hw_wlan_nv_c8817d_VC.bin
 etc/wifi/WCNSS_hw_wlan_nv_c8817e_VC.bin
@@ -927,6 +928,8 @@ etc/wifi/WCNSS_hw_wlan_nv_y550_l02.bin
 etc/wifi/WCNSS_hw_wlan_nv_y550_l02_vb.bin
 etc/wifi/WCNSS_hw_wlan_nv_y550_l03.bin
 etc/wifi/WCNSS_hw_wlan_nv_y550_l03_vb.bin
+etc/wifi/WCNSS_qcom_cfg.ini
+etc/wifi/WCNSS_qcom_wlan_nv.bin
 wifi/wifi_mt_2.3.sh
 wifi/wifi_mt_2.4.sh
 wifi/wifi_mt_2.5.sh
@@ -983,4 +986,3 @@ lib/modules/qcrypto.ko
 lib/modules/radio-iris-transport.ko
 lib/modules/spidev.ko
 lib/modules/test-iosched.ko
-lib/modules/wlan.ko
