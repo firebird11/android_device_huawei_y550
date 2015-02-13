@@ -46,11 +46,11 @@ PRODUCT_COPY_FILES += \
 
 # Diag cfg
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/DiagCfg/Diag.cfg:system/etc/DiagCfg/Diag.cfg
+    $(LOCAL_PATH)/configs/Diag.cfg:system/etc/DiagCfg/Diag.cfg
 
 # DPM
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/dpm/fdMgr/fd.conf:system/etc/dpm/fdMgr/fd.conf
+    $(LOCAL_PATH)/configs/fd.conf:system/etc/dpm/fdMgr/fd.conf
 
 # gps/location secuity configuration file
 PRODUCT_COPY_FILES += \
@@ -61,36 +61,33 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/capability.xml:system/etc/capability.xml \
-    $(LOCAL_PATH)/rootdir/etc/device_monitor_for_nff.conf:system/etc/device_monitor_for_nff.conf \
-    $(LOCAL_PATH)/rootdir/etc/device_state_monitor.conf:system/etc/device_state_monitor.conf \
-    $(LOCAL_PATH)/rootdir/etc/globalAutoAdapt-conf.xml:system/etc/globalAutoAdapt-conf.xml \
-    $(LOCAL_PATH)/rootdir/etc/globalMatchs-conf.xml:system/etc/globalMatchs-conf.xml \
-    $(LOCAL_PATH)/rootdir/etc/qlog-conf.xml:system/etc/qlog-conf.xml \
-    $(LOCAL_PATH)/rootdir/etc/renice-loggers.sh:system/etc/renice-loggers.sh \
-    $(LOCAL_PATH)/rootdir/etc/virtualNets-conf.xml:system/etc/virtualNets-conf.xml \
-    $(LOCAL_PATH)/rootdir/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
-    $(LOCAL_PATH)/rootdir/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml
+    $(LOCAL_PATH)/configs/capability.xml:system/etc/capability.xml \
+    $(LOCAL_PATH)/configs/device_monitor_for_nff.conf:system/etc/device_monitor_for_nff.conf \
+    $(LOCAL_PATH)/configs/device_state_monitor.conf:system/etc/device_state_monitor.conf \
+    $(LOCAL_PATH)/configs/globalAutoAdapt-conf.xml:system/etc/globalAutoAdapt-conf.xml \
+    $(LOCAL_PATH)/configs/globalMatchs-conf.xml:system/etc/globalMatchs-conf.xml \
+    $(LOCAL_PATH)/configs/qlog-conf.xml:system/etc/qlog-conf.xml \
+    $(LOCAL_PATH)/configs/renice-loggers.sh:system/etc/renice-loggers.sh \
+    $(LOCAL_PATH)/configs/virtualNets-conf.xml:system/etc/virtualNets-conf.xml \
+    $(LOCAL_PATH)/configs/wfdconfig.xml:system/etc/wfdconfig.xml \
+    $(LOCAL_PATH)/configs/wfdconfigsink.xml:system/etc/wfdconfigsink.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/whitelist_appops.xml:system/etc/whitelist_appops.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/configs/whitelist_appops.xml:system/etc/whitelist_appops.xml
 
 # Logmask
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/logmask/default_diag_mask.cfg:system/etc/logmask/default_diag_mask.cfg \
-    $(LOCAL_PATH)/rootdir/etc/logmask/dynamic_debug_mask.cfg:system/etc/logmask/dynamic_debug_mask.cfg \
-    $(LOCAL_PATH)/rootdir/etc/logmask/qdss.cfg:system/etc/logmask/qdss.cfg
+    $(LOCAL_PATH)/configs/default_diag_mask.cfg:system/etc/logmask/default_diag_mask.cfg \
+    $(LOCAL_PATH)/configs/dynamic_debug_mask.cfg:system/etc/logmask/dynamic_debug_mask.cfg \
+    $(LOCAL_PATH)/configs/qdss.cfg:system/etc/logmask/qdss.cfg
 
 # Nfc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hardfault.cfg:system/etc/nfc/hardfault.cfg \
-    $(LOCAL_PATH)/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/nfc-nci.conf:system/etc/nfc-nci.conf \
-    $(LOCAL_PATH)/nfcee_access.xml:system/etc/nfcee_access.xml
+    $(LOCAL_PATH)/configs/hardfault.cfg:system/etc/nfc/hardfault.cfg \
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/configs/nfc-nci.conf:system/etc/nfc-nci.conf \
+    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # Offmode charge
 PRODUCT_COPY_FILES += \
@@ -231,9 +228,9 @@ PRODUCT_PACKAGES += \
     lights.msm8916
 
 # Keylayout
-PRODUCT_PACKAGES += \
-    gpio-keys.kl \
-    synaptics_rmi4_i2c.kl
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/configs/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -295,20 +292,23 @@ PRODUCT_PACKAGES += \
     minivold
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    init.crda.sh \
-    init.qcom.bt.sh \
-    hsic.control.bt.sh \
-    init.ath3k.bt.sh \
-    init.qcom.coex.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.fm.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.wifi.sh \
-    init.qcom.modem_links.sh \
-    init.qcom.rootagent.sh \
-    init.qcom.uicc.sh
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.crda.sh:system/etc/init.crda.sh \
+    $(LOCAL_PATH)/configs/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+    $(LOCAL_PATH)/configs/hsic.control.bt.sh:system/etc/hsic.control.bt.sh \
+    $(LOCAL_PATH)/configs/init.ath3k.bt.sh:system/etc/init.ath3k.bt.sh \
+    $(LOCAL_PATH)/configs/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
+    $(LOCAL_PATH)/configs/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
+    $(LOCAL_PATH)/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
+    $(LOCAL_PATH)/configs/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+    $(LOCAL_PATH)/configs/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
+    $(LOCAL_PATH)/configs/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
+    $(LOCAL_PATH)/configs/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
+    $(LOCAL_PATH)/configs/init.qcom.rootagent.sh:system/etc/init.qcom.rootagent.sh \
+    $(LOCAL_PATH)/configs/init.qcom.uicc.sh:system/etc/init.qcom.uicc.sh \
+    $(LOCAL_PATH)/configs/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
+    $(LOCAL_PATH)/configs/qca6234-service.sh:system/etc/qca6234-service.sh \
+    $(LOCAL_PATH)/configs/hcidump.sh:service/etc/hcidump.sh
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -320,9 +320,6 @@ PRODUCT_PACKAGES += \
     init.qcom.ssr.sh \
     init.mdm.sh \
     init.qcom.syspart_fixup.sh \
-    init.qcom.audio.sh \
-    qca6234-service.sh \
-    hcidump.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qcom.uicc.sh \
@@ -352,22 +349,23 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 # Vold
-PRODUCT_PACKAGES += \
-    vold.fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vold.fstab:system/etc/vold.fstab
 
 # Wifi
 PRODUCT_PACKAGES += \
     libcurl \
     wcnss_service
 
-PRODUCT_PACKAGES += \
-    hostapd.accept \
-    hostapd.deny \
-    hostapd_default.conf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/configs/hostapd.conf:system/etc/hostapd/hostapd.conf
 
-PRODUCT_PACKAGES += \
-    wpa_supplicant_overlay.conf \
-    p2p_supplicant_overlay.conf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
        dalvik.vm.heapgrowthlimit=128m

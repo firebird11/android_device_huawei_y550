@@ -217,9 +217,30 @@ case "$target" in
 esac
 
 #
-# Initialize RNDIS Diag option. If unset, set it to 'none'.
+# Add changes to support diag with rndis
 #
 diag_extra=`getprop persist.sys.usb.config.extra`
-if [ "$diag_extra" == "" ]; then
-	setprop persist.sys.usb.config.extra none
-fi
+case "$diag_extra" in
+	"diag" | "diag,diag_mdm" | "diag,diag_mdm,diag_qsc")
+		case "$baseband" in
+			"mdm")
+				setprop persist.sys.usb.config.extra diag,diag_mdm
+			;;
+		        "dsda" | "sglte2" )
+				setprop persist.sys.usb.config.extra diag,diag_mdm,diag_qsc
+			;;
+		        "sglte")
+				setprop persist.sys.usb.config.extra diag,diag_qsc
+			;;
+		        "dsda2")
+				setprop persist.sys.usb.config.extra diag,diag_mdm,diag_mdm2
+			;;
+		        *)
+				setprop persist.sys.usb.config.extra diag
+			;;
+	        esac
+	;;
+        *)
+		setprop persist.sys.usb.config.extra none
+	;;
+esac
