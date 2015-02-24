@@ -91,6 +91,9 @@ USE_OPENGL_RENDERER := true
 # Hardware
 #BOARD_HARDWARE_CLASS := device/huawei/y550/cmhw
 
+# Init
+TARGET_PROVIDES_INIT_RC := true # we need this to properly initialize rild
+
 # Liblight
 TARGET_PROVIDES_LIBLIGHT := true
 
