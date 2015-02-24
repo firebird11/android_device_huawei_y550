@@ -111,8 +111,22 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/res/images/480x854/percent_10.png:root/res/images/480x854/percent_10.png \
     $(LOCAL_PATH)/rootdir/res/images/480x854/percent_5.png:root/res/images/480x854/percent_5.png \
     $(LOCAL_PATH)/rootdir/res/images/480x854/percent_sign.png:root/res/images/480x854/percent_sign.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_0.png:root/res/images/charger/battery_0.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_1.png:root/res/images/charger/battery_1.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_2.png:root/res/images/charger/battery_2.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_3.png:root/res/images/charger/battery_3.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_4.png:root/res/images/charger/battery_4.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_5.png:root/res/images/charger/battery_5.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_charge.png:root/res/images/charger/battery_charge.png \
+    $(LOCAL_PATH)/rootdir/res/images/charger/battery_fail.png:root/res/images/charger/battery_fail.png \
     $(LOCAL_PATH)/rootdir/res/images/mmi/fail.png:root/res/images/mmi/fail.png \
-    $(LOCAL_PATH)/rootdir/res/images/mmi/pass.png:root/res/images/mmi/pass.png
+    $(LOCAL_PATH)/rootdir/res/images/mmi/pass.png:root/res/images/mmi/pass.png \
+    $(LOCAL_PATH)/rootdir/res/images/normal/level0.png:root/res/images/normal/level0.png \
+    $(LOCAL_PATH)/rootdir/res/images/normal/level1.png:root/res/images/normal/level1.png \
+    $(LOCAL_PATH)/rootdir/res/images/normal/level2.png:root/res/images/normal/level2.png \
+    $(LOCAL_PATH)/rootdir/res/images/normal/level3.png:root/res/images/normal/level3.png \
+    $(LOCAL_PATH)/rootdir/res/images/normal/level4.png:root/res/images/normal/level4.png \
+    $(LOCAL_PATH)/rootdir/res/images/normal/level5.png:root/res/images/normal/level5.png
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
