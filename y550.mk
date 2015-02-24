@@ -341,10 +341,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.device.rc
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init:root/init \
-    $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
-
 #spec service
 PRODUCT_PACKAGES += \
     init.qti.carrier.rc
