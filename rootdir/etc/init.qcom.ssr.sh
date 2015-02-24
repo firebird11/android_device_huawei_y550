@@ -135,9 +135,3 @@ if [ $((subsys_mask & 63)) == 63 ]; then
 else
     echo 1 > /sys/module/subsystem_restart/parameters/restart_level
 fi
-#/* < DTS2014082600802 chenjikun 20140826 begin */
-#/*del the code for wcnss dump function*/
-#/* DTS2014082600802 chenjikun 20140826 end > */
-#/* < DTS2014081103676 chenjikun 20140820 begin */
-#/*revert the DTS2014081410083*/
-#/* DTS2014081103676 chenjikun 20140820 end > */
