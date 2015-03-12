@@ -31,21 +31,23 @@ endif
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../stack/common \
         frameworks/native/include/media/openmax \
-        hardware/qcom/display-caf-new/libgralloc \
-        hardware/qcom/media-caf-new/libstagefrighthw \
+        hardware/qcom/display-caf/$(TARGET_BOARD_PLATFORM)/libgralloc \
+        hardware/qcom/media-caf/$(TARGET_BOARD_PLATFORM)/libstagefrighthw \
         $(LOCAL_PATH)/../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
         $(LOCAL_PATH)/../util \
         $(LOCAL_PATH)/wrapper
 
 ifeq ($(TARGET_USE_VENDOR_CAMERA_EXT),true)
-LOCAL_C_INCLUDES += hardware/qcom/display-caf-new/msm8974/libgralloc
+LOCAL_C_INCLUDES += hardware/qcom/display-caf/msm8974/libgralloc
 else
-LOCAL_C_INCLUDES += hardware/qcom/display-caf-new/libgralloc
+LOCAL_C_INCLUDES += hardware/qcom/display-caf/$(TARGET_BOARD_PLATFORM)/libgralloc
 endif
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+
+LOCAL_C_INCLUDES += system/media/camera/include
 
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface
