@@ -55,7 +55,11 @@ static const struct sensor_t sSensorList[] = {
 		2000,	/* microseconds */
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	},
 
 	/* magnetic field sensor
@@ -71,7 +75,11 @@ static const struct sensor_t sSensorList[] = {
 		16667,
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	},*/
 
 	/* orientation sensor
@@ -87,7 +95,11 @@ static const struct sensor_t sSensorList[] = {
 		16667 ,
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	},*/
 
 	/* light sensor name */
@@ -103,7 +115,11 @@ static const struct sensor_t sSensorList[] = {
 		0,
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	},
 
 	/* proximity sensor */
@@ -119,7 +135,11 @@ static const struct sensor_t sSensorList[] = {
 		0,
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	},
 
 	/* gyro scope */
@@ -135,7 +155,11 @@ static const struct sensor_t sSensorList[] = {
 		2000,
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	},
 
 	/* barometer */
@@ -151,7 +175,11 @@ static const struct sensor_t sSensorList[] = {
 		20000,
 		0,
 		0,
-		{NULL}
+		0,
+		0,
+		0,
+		0,
+		{ }
 	}
 };
 
