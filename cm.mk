@@ -26,10 +26,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/huawei/y550/full_y550.mk)
 
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := y550
 PRODUCT_NAME := cm_y550
