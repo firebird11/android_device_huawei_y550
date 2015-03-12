@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/cdma.mk)
-
 # Release name
 PRODUCT_RELEASE_NAME := Y550
 
